@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JobMate AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="icon.png" alt="Logo" class="logo">
+      <h1>JobMate AI</h1>
+    </header>
+    
+    <div class="content">
+      <div id="description-section" class="section">
+        <h2>Find Your Perfect Job Match</h2>
+        <p>This AI-powered extension helps you analyze <strong>job descriptions</strong> on LinkedIn to determine your compatibility based on your resume.</p>
+      </div>
+
+      <div id="description-section" class="section">
+        <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>Upload Your Resume</h3>
+                    <p>Connect your resume or LinkedIn profile to establish your baseline qualifications.</p>
+                </div>
+                <div class="step">
+                    <h3>Select Any Job</h3>
+                    <p>Use LinkedIn as you normally would - we'll enhance the experience.</p>
+                </div>
+                <div class="step">
+                    <h3>See Your Match</h3>
+                    <p>Compatibility scores and analysis appear automatically on that specific job.</p>
+                </div>
+            </div>
+      </div>
+
+      <div class="section" id="api-key-section">
+        <label for="api-key">🔐 Groq API Key</label>
+        <input type="password" id="api-key" placeholder="gsk..." />
+        <div class="api-key-info">
+          Don&rsquo;t have one? <a href="https://console.groq.com/keys" target="_blank">Get your Groq API key</a>
+        </div>
+      </div>
+      
+      <div id="action-section" class="section">
+        <button id="analyze-button" class="button primary-button">Analyze This Job</button>
+      </div>
+      
+      <div id="not-linkedin" class="section hidden">
+        <div class="warning-icon">⚠️</div>
+        <h2>Not on LinkedIn Jobs</h2>
+        <p>Please navigate to a LinkedIn job page to use this extension.</p>
+        <a href="https://www.linkedin.com/jobs/" target="_blank" class="button">Go to LinkedIn Jobs</a>
+      </div>
+      
+      <div id="status-section" class="section hidden">
+        <div id="job-status" class="status-box">
+          <div class="status-icon success">✓</div>
+          <div class="status-message">Job data extracted successfully</div>
+        </div>
+        <button id="reset-button" class="button secondary-button">Reset</button>
+      </div>
+    </div>
+    
+    <footer>
+      <p>© 2025 JobMate AI</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>

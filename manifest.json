@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Job Assistant",
+  "version": "1.0",
+  "description": "Analyze LinkedIn job postings and match with your resume",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://*.linkedin.com/*",
+    "https://jobmate-ai.vercel.app/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.linkedin.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["results.html", "results.js", "styles.css", "icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
