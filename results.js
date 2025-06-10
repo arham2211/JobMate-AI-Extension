@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const resumeStatus = document.getElementById("resume-status");
     const jobAnalysisSection = document.getElementById("job-analysis");
     const jobResultsContent = document.getElementById("job-results-content");
-    
+
+
     // Check if job analysis data exists
     chrome.storage.local.get(["jobAnalysis"], function (result) {
       if (result.jobAnalysis) {
@@ -12,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         chrome.storage.local.get(["resumeUploaded"], function (resumeResult) {
           if (resumeResult.resumeUploaded) {
             resumeStatus.classList.remove("hidden");
-            resumeStatus.querySelector(".status-message").textContent = "Resume uploaded successfully";
+            resumeStatus.querySelector(".status-message").textContent = "Resume not uploaded yet";
             
             // Show job analysis results
             jobAnalysisSection.classList.remove("hidden");
@@ -71,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
       const formData = new FormData();
       formData.append("file", file);
-      console.log("📄 Uploading file:", file.name);
   
       fetch("https://jobmate-ai.vercel.app/upload-resume/", {
         method: "POST",

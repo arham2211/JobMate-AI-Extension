@@ -3,15 +3,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     const htmlContent = document.documentElement.outerHTML;
     const apiKey = request.apiKey;
 
-    console.log("API Key received:", apiKey);
-
     if (!apiKey) {
       console.error("❌ No API key provided");
       sendResponse({ success: false, error: "API key is missing" });
       return;
     }
 
-    console.log("📄 Extracting page HTML...");
 
     extractJobPostEndpoint({ html: htmlContent }, apiKey)
       .then(data => {
@@ -23,7 +20,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         sendResponse({ success: false, error: err.message });
       });
 
-    return true; // Keeps the messaging channel open for async response
+    return true;
   }
 });
 

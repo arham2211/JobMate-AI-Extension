@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Smart Job Assistant",
+  "name": "JobMate AI",
   "version": "1.0",
   "description": "Analyze LinkedIn job postings and match with your resume",
   "icons": {
