@@ -25,12 +25,16 @@
 
 ## 🖼️ Screenshots
 
+### 🔹 Extension Interface
+
 ![JobMate AI](assets/jobmate_ai.png)  
-![Interface](assets/interface.png) 
-*Extension interface*
+![Interface](assets/interface.png)  
+*JobMate AI extension interface on LinkedIn*
+
+### 🔹 Analysis Results
 
 ![Analysis Results](assets/result.png)  
-*Resume matching results*
+*Resume matching results with skill breakdown*
 
 ---
 
