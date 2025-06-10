@@ -93,9 +93,11 @@ document.addEventListener("DOMContentLoaded", function () {
           
           // Get job analysis data and show results
           const analysis = data.similarity;
+          const jobDict = data.job_dict || {};
+          const title = jobDict.title;
           chrome.storage.local.set({ jobAnalysis: analysis }, function () {
             jobAnalysisSection.classList.remove("hidden");
-            jobResultsContent.innerHTML = createJobAnalysisHTML(analysis);
+            jobResultsContent.innerHTML = createJobAnalysisHTML(analysis, title);
           });
         })
         .catch((error) => {
@@ -107,8 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
   
-    function createJobAnalysisHTML(analysis) {
-      console.log("Creating job analysis HTML");
+    function createJobAnalysisHTML(analysis, jobTitle = "Job Title Not Available") {
       const score = analysis.match_score || 0;
       let scoreClass = "score-low";
     
@@ -121,8 +122,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const matchingSkills = analysis.matching_skills || [];
       const missingSkills = analysis.missing_skills || [];
       const suggestedCourses = analysis.suggested_courses || [];
-    
+
       return `
+       <div class="job-title-container enhanced-job-title">
+       <div class="job-title-header">
+        <span class="job-icon">💼</span>
+        <h2 class="job-title-text">${jobTitle}</h2>
+       </div>
+       </div>
+
         <div class="match-score-container">
           <div class="score-circle ${scoreClass}">
             <div class="score-value">${Math.round(score)}%</div>
