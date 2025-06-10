@@ -25,7 +25,8 @@
 
 ## 🖼️ Screenshots
 
-![JobMate AI](assets/jobmate_ai.png)  ![Interface](assets/interface.png) 
+![JobMate AI](assets/jobmate_ai.png)  
+![Interface](assets/interface.png) 
 *Extension interface*
 
 ![Analysis Results](assets/result.png)  
