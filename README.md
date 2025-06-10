@@ -8,7 +8,7 @@
 
 🎥 **Watch the demo video**  
 
- [![Watch the video](https://github.com/arham2211/JobMate-AI-Extension/blob/master/demo_video/demo_video.mp4?raw=true)
+ [View Demo Video](https://github.com/arham2211/JobMate-AI-Extension/blob/master/demo_video/demo_video.mp4?raw=true)
 
 ---
 
@@ -53,6 +53,17 @@
 
 ---
 
+## 📦 Backend Setup (Optional for Resume Upload)
+
+> This extension uses a FastAPI backend for resume parsing & matching. You can use the hosted version or self-host.
+
+### Use Hosted (default):
+No setup required. The extension sends requests to:
+
+https://jobmate-ai.vercel.app
+
+---
+
 ## 📋 Usage Guide
 
 1. Go to any LinkedIn job listing  
@@ -66,12 +77,6 @@
 
 ---
 
-## 📦 Backend Setup (Optional for Resume Upload)
+## 📄 License
 
-> This extension uses a FastAPI backend for resume parsing & matching. You can use the hosted version or self-host.
-
-### Use Hosted (default):
-No setup required. The extension sends requests to:
-
-https://jobmate-ai.vercel.app
-
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
