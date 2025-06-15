@@ -85,3 +85,11 @@ https://jobmate-ai.vercel.app
 ## 📄 License
 
 This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Developed by:** Arham Affan  
+**GitHub:** [@arham2211](https://github.com/arham2211)  
+**Contact:** arhamaffan22@gmail.com
